@@ -103,3 +103,25 @@ end &&
 select mark_sales2(100)
 
 select sales , mark_sales2(sales ) from sales1 ; 
+
+
+
+create table loop_table(val int)
+
+
+Delimiter $$
+create procedure insert_data()
+Begin
+set @var  = 10 ;
+generate_data : loop
+insert into loop_table values (@var);
+set @var = @var + 1  ;
+if @var  = 100 then 
+	leave generate_data;
+end if ;
+end loop generate_data;
+End $$
+
+call insert_data()
+
+select * from loop_table
