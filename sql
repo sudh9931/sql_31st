@@ -125,3 +125,13 @@ End $$
 call insert_data()
 
 select * from loop_table
+
+
+
+Task 
+	1 . Create a loop for a table to insert a record into a tale for two columns in first coumn you have to inset a data ranging from 1 to 100 and in second column you hvae to inset a square of the first column 
+	2 . create a user defined function to find out a date differences in number of days 
+    3 . create a UDF to find out a log base 10 of any given number 
+    4 . create a UDF which will be able to check a total number of records avaible in your table 
+    5 . create a procedure to find out  5th highest profit in your sales table you dont have to use rank and windowing function 
+    
